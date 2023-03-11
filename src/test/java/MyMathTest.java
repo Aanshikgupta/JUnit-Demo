@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.util.*;
 
@@ -8,6 +8,31 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MyMathTest {
 
     List<String> todos= Arrays.asList("AWS", "Amazon", "GCP", "Others");
+
+    @BeforeEach
+    void beforeEach(){
+        System.out.println("Execute before each test case");
+    }
+
+    @BeforeAll
+    static void beforeAll(){
+        System.out.println("Execute Before All at the very beginning");
+    }
+
+
+    @AfterEach
+    void afterEach(){
+        System.out.println("Execute after each test case");
+    }
+
+    @AfterAll
+    static void afterAll(){
+        System.out.println("Execute After All at the very beginning");
+    }
+
+
+
+
 
     //Annotation important for test
     @Test
