@@ -9,11 +9,13 @@ public class MyMathTest {
 
     List<String> todos= Arrays.asList("AWS", "Amazon", "GCP", "Others");
 
+    //Individual Setup for a particular test
     @BeforeEach
     void beforeEach(){
         System.out.println("Execute before each test case");
     }
 
+    //Common setup for all tests
     @BeforeAll
     static void beforeAll(){
         System.out.println("Execute Before All at the very beginning");
@@ -25,14 +27,11 @@ public class MyMathTest {
         System.out.println("Execute after each test case");
     }
 
+    //Clean Up Collective for all test
     @AfterAll
     static void afterAll(){
         System.out.println("Execute After All at the very beginning");
     }
-
-
-
-
 
     //Annotation important for test
     @Test
